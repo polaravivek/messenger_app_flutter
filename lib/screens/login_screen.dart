@@ -1,3 +1,4 @@
+import 'package:flash_chat/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -18,9 +19,12 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              height: 200.0,
-              child: Image.asset('images/logo.png'),
+            Hero(
+              tag: 'logo',
+              child: Container(
+                height: 200.0,
+                child: Image.asset('images/logo.png'),
+              ),
             ),
             SizedBox(
               height: 48.0,
@@ -85,12 +89,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    //Implement login functionality.
+                    Navigator.pushNamed(context, ChatScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
                   child: Text(
                     'Log In',
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
