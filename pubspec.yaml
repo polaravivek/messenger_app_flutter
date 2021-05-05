@@ -13,10 +13,16 @@ dependencies:
   cupertino_icons: ^0.1.2
   animated_text_kit: ^4.2.1
 
+#  for firebase connection and storage
+
+  firebase_core: ^1.1.0
+  firebase_auth: ^1.1.3
+  cloud_firestore: ^2.0.0
+  modal_progress_hud_nsn: ^0.1.0-nullsafety-0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
 
 flutter:
   uses-material-design: true
